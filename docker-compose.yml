@@ -4,10 +4,10 @@ services:
   web:
     build: .
     container_name: reco_backend_web
-    command: gunicorn reco_backend.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn reco_backend.wsgi:application --bind 0.0.0.0:8004
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "8004:8004"
     env_file:
       - .env
